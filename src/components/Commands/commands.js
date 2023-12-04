@@ -35,7 +35,7 @@ export default {
             usage: 'discord',
             fn: () => {
                 window.open('https://discordapp.com/users/178721879878533120', '_blank')
-                return "opening discord account..."
+                return "opening discord account...\nif it failed my discord is romedius! i was very lucky"
             }
         },
         languages: {
