@@ -1,0 +1,41 @@
+name: Build and Commit
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14' # Specify the Node.js version
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Build
+      run: npm run build
+
+    - name: Get Last Commit Author
+      id: last_commit_author
+      run: |
+        echo "LAST_COMMIT_AUTHOR_NAME=$(git log -1 --pretty=format:'%an')" >> $GITHUB_ENV
+        echo "LAST_COMMIT_AUTHOR_EMAIL=$(git log -1 --pretty=format:'%ae')" >> $GITHUB_ENV
+
+    - name: Commit and Push
+      run: |
+        git config --global user.name ${{ env.LAST_COMMIT_AUTHOR_NAME }}
+        git config --global user.email ${{ env.LAST_COMMIT_AUTHOR_EMAIL }}
+        git add build/
+        git commit -m "Update build" --allow-empty
+        git push origin HEAD:main --force
+      env:
+        GITHUB_TOKEN: ${{ secrets.GH_PAT_TOKEN }}
