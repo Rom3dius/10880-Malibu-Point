@@ -1,12 +1,9 @@
-# AshTerm
+# 10880 Malibu Point
 A Terminal Styled Portfolio Website. 🐱‍💻
-
-![Cloudflare](https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logoColor=white&label=Powered%20By)
 
 ### Made Using-
 - ⚛ Framework [ReactJS](https://reactjs.org/)
 - 💻 Terminal [react-console-emulator](https://github.com/linuswillner/react-console-emulator)
-- 🚀 Deployed using [CloudFlare](https://pages.dev)
 
 ### Running Locally 🚀
 Clone the repos's main branch.
@@ -26,15 +23,11 @@ Run the app.
 $ npm start
 ```
 
-### Usage 🐱
-Feel free to use this project to make your own Portfolio! Just make sure you give a small credit to my own Project.\
-Cheers! 🍻
-
-### Contribution 🤝
-Feel free to add Issues/Pull Requests to the Project.
-
 ### License ⚖
 MIT License
+
+### Credits
+This website is based on asrvd's AshTerm repository! Check it out [here!](https://github.com/asrvd/AshTerm)
 
 ### Ending Note ✒
 - *Consider giving the repo a ⭐ if you liked the project!*

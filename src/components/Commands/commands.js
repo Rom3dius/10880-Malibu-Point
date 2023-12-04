@@ -21,15 +21,7 @@ export default {
             description: 'About Me.',
             usage: 'whois',
             fn: () => {
-                return "About Me.\n---\nmale\n19\nstudent\nworking at numeus\ninitiald\nbased in switzerland\n---\n"
-            }
-        },
-        twitter: {
-            description: 'Opens my Twitter Handle.',
-            usage: 'twitter',
-            fn: () => {
-                /* window.open('https://twitter.com/_asheeshh', '_blank') */
-                return "don't have twitter... maybe in the future"
+                return "About Me.\n---\nmale\n20\nstudent\ninitiald\nbased in switzerland\n---\n"
             }
         },
         github: {
@@ -54,12 +46,13 @@ export default {
             fn: () => {
                 return `
                     these are the languages I know.\n---\n
-                    english          - 100%
-                    german           - 65%
-                    python           - 80%
-                    javascript       - 20%
-                    rust             - 10%
-                    c++              - 5%\n---\n
+                    english
+                    german
+                    c#
+                    rust
+                    lua
+                    python
+                    js\n---\n
                 `
             }
         },
@@ -69,13 +62,11 @@ export default {
             fn: () => {
                 return `
                     these are the skills I have.\n---\n
-                    procrastination  - 100%
-                    coding           - 50%
-                    pentesting       - 30%
-                    studying         - 5%
-                    overthinking     - 100%
-                    driving          - 60%
-                    problem solving  - 40%\n---\n
+                    coding
+                    overthinking
+                    driving
+                    problem solving
+                    pentesting\n---\n
                 `
             }
         },
@@ -84,16 +75,20 @@ export default {
             usage: 'projects',
             fn: () => {
                 return `
-                    Cool projects I have worked on.\n---\n
+                    Cool projects I have worked on or am working on.\n---\n
                     'discord-ttt'                    | 'discord bot for gmod ttt (mutes dead players)'   | 'python/lua'
                     'tv-binance-relay'               | 'open trades using signals from tv scripts'       | 'python/pinescript'
                     'thallia-discord'                | 'Discord-Bot'                                     | 'python'
                     'tv-settings-optimizer'          | 'optimizes pine script settings'                  | 'python/pinescript'
-                    'pl-translate'                   | 'pig latin translator'                            | 'C++'
-                    Cool projects I'm working on. \n---\n
-                    's3cr3t-stuff'                   | 'for my awesome employers at NUMEUS'              | 'python/C++'
-                    'hyperion'                       | 'trading passion project'                         | 'rust'
+                    'swim-api-rs'                    | 'Discord bot and API for SwimAssettoServer'       | 'rust'
+                    'SwimAssettoServer'              | 'Modified AssettoServer with custom plugins'      | 'C#/lua'
+                    'swim-plate-generator'           | 'Lua script with put custom plates on cars'       | 'lua'
                     '10880 Malibu Point'             | 'this website'                                    | 'react-js'
+                    'raptor-retriever'               | 'library for retrieving data from Capser nodes'   | 'rust'
+
+                    There are alot of unmentioned projects, these are the ones I can backup with code I have in my github repositories. \n
+                    There are lots of work related projects that I can't mention here, and projects that I've worked on when I was much younger
+                    and have been lost to time.
               `
             }
         },
@@ -102,44 +97,32 @@ export default {
             usage: 'editor',
             fn: () => {
                 return `
+                    Editor: VSCode\n
+
                     Editor: Neovim\n
-                    Plugins: >70\n
+                    Plugins: >70\\n
                                    `
             }
         },
-        /* repo: {
+        repo: {
             description: "Opens this website's github repository.",
             usage: 'repo',
             fn: () => {
-                window.open("https://github.com/asrvd/AshTerm", '_blank')
+                window.open("https://github.com/Rom3dius/10880-Malibu-Point", '_blank')
                 return "opening repository..."
             }
-        }, */
+        },
         credits: {
             description: 'Credits for this website.',
             usage: 'credits',
             fn: () => {
                 return `
                     Credits for this website.\n---\n
-                    numeus.xyz
+                    Rom3dius
                     AshTerm by asrvd
                 `
             }
         },
-        spotify: {
-            description: 'Get info about my recently played song.',
-            usage: 'spotify',
-            fn: async () => {
-                const item = await getnp()
-                return `Not implemented yet! Check back later.`
-              /* return `
-                    Now Playing/Recently Played\n
-                    ---\n
-                    Song: ${item.song}\n
-                    Artist: ${item.artist}\n---\n
-                `  */
-            }
-        }
     },
     overwrites:{
         help: {
